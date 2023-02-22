@@ -8,8 +8,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:prettier/recommended' /*,
-    'plugin:storybook/recommended'*/
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended'
   ],
   overrides: [],
   parserOptions: {
@@ -22,6 +22,8 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'react/react-in-jsx-scope': 'off',
-    'eslint-disable-next-line': 'off'
+    'eslint-disable-next-line': 'off',
+    'no-undef': 'off',
+    'no-unused-vars': 'off'
   }
 };

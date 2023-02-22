@@ -1,18 +1,6 @@
-import {
-  GlobalStyleComponent,
-  DefaultTheme,
-  createGlobalStyle,
-  css,
-} from "styled-components";
+import { createGlobalStyle, css } from 'styled-components';
 
-type GlobalStyleProps = {
-  theme?: DefaultTheme;
-};
-
-const GlobalStyles: GlobalStyleComponent<
-  GlobalStyleProps,
-  DefaultTheme
-> = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   * {
     margin:0;
     padding:0;
@@ -26,7 +14,7 @@ const GlobalStyles: GlobalStyleComponent<
 
   body {
     ${({ theme }) => css`
-      background: ${theme.colors.backgroundColor.secondaryBg};
+      background: ${theme.colors.mainBg};
       font-size: 1.6rem;
       font-family: ${theme.fonts.default};
       outline: none;
@@ -49,13 +37,11 @@ const GlobalStyles: GlobalStyleComponent<
 
   a {
     font-family: ${({ theme }) => theme.fonts.default};
-    color: ${({ theme }) => theme.colors.fontColor.secondaryColor};
+    color: ${({ theme }) => theme.colors.secondaryColor};
   }
-  
+
   .table {
     width: 100%;
     overflow-y: auto;
   }
 `;
-
-export default GlobalStyles;
